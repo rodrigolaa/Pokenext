@@ -28,10 +28,6 @@ webpack: (config, { isServer }) => {
   config.optimization.minimize = true
   config.optimization.minimizer = []
   return config
-},
-// Increase the memory limit for the build process
-env: {
-  NODE_OPTIONS: "--max_old_space_size=4096"
 }
 
 }
