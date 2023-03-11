@@ -18,16 +18,6 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['raw.githubusercontent.com'],
-},
-webpack: (config, { isServer }) => {
-  if (!isServer) {
-    config.node = {
-      fs: 'empty'
-    }
-  }
-  config.optimization.minimize = true
-  config.optimization.minimizer = []
-  return config
 }
 
 }
