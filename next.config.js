@@ -23,6 +23,20 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['raw.githubusercontent.com'],
+    webpack: (config, { isServer }) => {
+      if (!isServer) {
+        config.node = {
+          fs: 'empty'
+        }
+      }
+      config.optimization.minimize = true
+      config.optimization.minimizer = []
+      return config
+    },
+    // Increase the memory limit for the build process
+    env: {
+      NODE_OPTIONS: "--max_old_space_size=4096"
+    }
   },
   
 }
