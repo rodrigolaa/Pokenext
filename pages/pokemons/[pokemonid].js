@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     //   }
 
     //params
-    console.log("PATHS:", data)
+    // console.log("PATHS:", data)
 
     const paths = data.results.map((pokemon, index) => {
         return {
@@ -52,7 +52,7 @@ export async function getStaticProps(context) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const data = await res.json()
 
-    console.log("DATA:", data)
+    // console.log("DATA:", data)
 
 
     return {
