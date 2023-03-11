@@ -1,4 +1,4 @@
-import PokemonSearch from '@/components/SearchBox'
+// import PokemonSearch from '@/components/SearchBox'
 import styles from '@/styles/Home.module.css'
 
 import Image from 'next/image'

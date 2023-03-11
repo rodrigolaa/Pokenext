@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "styles/Navbar.module.css"
-import PokemonSearch from './SearchBox';
+// import PokemonSearch from './SearchBox';
 
 
 export default function Navbar(){
@@ -13,9 +13,9 @@ export default function Navbar(){
             </div>
             
             <ul className={styles.link_items}>
-                <li>
+                {/* <li>
                     <PokemonSearch/>
-                </li>
+                </li> */}
                 
                 <li>
                     <Link href="/" legacyBehavior><a>Home</a></Link>
