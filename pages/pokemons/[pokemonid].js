@@ -15,6 +15,7 @@ export async function getStaticPaths() {
     const data = await res.json()
 
     //params
+    console.log("PATHS:", data)
 
     const paths = data.results.map((pokemon, index) => {
         return {
@@ -34,6 +35,9 @@ export async function getStaticProps(context) {
     const id = context.params.pokemonid
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const data = await res.json()
+
+    console.log("DATA:", data)
+
 
     return {
         props: {pokemon: data}
@@ -67,13 +71,13 @@ export default function Pokemon({pokemon}){
                         <h4>Weight:</h4>
                         <p>{pokemon.weight / 10} kg</p>
                     </div>
-                    <div className={styles.data_weight}>
+                    {/* <div className={styles.data_weight}>
                     <h4>Abilities:</h4>
                     {pokemon.abilities.map((item, index) => (
                         <span key={index} className={`${styles.type}`}>{item.ability.name}</span>
                     )
                     )}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
