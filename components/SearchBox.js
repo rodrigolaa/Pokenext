@@ -6,7 +6,7 @@ import styles from 'styles/Search.module.css'
 import Link from 'next/link';
 
 
-export default function PokemonSearch({pokemons}) {
+export default function PokemonSearch() {
 
         const [searchTerm, setSearchTerm] = useState('');
 
@@ -17,7 +17,8 @@ export default function PokemonSearch({pokemons}) {
           setSearchTerm(event.target.value);
         };
 
-            const filteredPokemons = pokemons ?  searchTerm.length >= 1 ? pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())).slice(0, 10):[] : [] ;
+            const filteredPokemons = []
+            // pokemons ?  searchTerm.length >= 1 ? pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())).slice(0, 10):[] : [] ;
             
 
       function handleSearch(){

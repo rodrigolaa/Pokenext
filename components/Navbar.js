@@ -4,7 +4,7 @@ import styles from "styles/Navbar.module.css"
 import PokemonSearch from './SearchBox';
 
 
-export default function Navbar({data}){
+export default function Navbar(){
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
@@ -14,7 +14,7 @@ export default function Navbar({data}){
             
             <ul className={styles.link_items}>
                 <li>
-                    <PokemonSearch pokemons={data}/>
+                    <PokemonSearch/>
                 </li>
                 
                 <li>
