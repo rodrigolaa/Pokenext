@@ -18,6 +18,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['raw.githubusercontent.com', "cdn.traction.one"],
+    unoptimized: true,
 },
 experimental: {
   //largePageDataBytes: 128 * 1000, // 128KB by default
