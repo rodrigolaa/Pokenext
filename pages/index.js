@@ -5,6 +5,9 @@ import Image from 'next/image'
 
 import Card from '../components/Card'
 
+import {useRouter} from 'next/router'
+
+
 export async function getStaticProps(){
 
   const maxPokemons = 251
@@ -28,10 +31,13 @@ export async function getStaticProps(){
     }
   }
 
-
 }
 
 export default function Home({pokemons}) {
+  const router = useRouter();
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   return (
       <div className={styles.title_container}>
         <h1 className={styles.title}>Poke<span className={styles.title_span}>Next</span></h1>
