@@ -8,7 +8,7 @@ import Card from '../components/Card'
 import {useRouter} from 'next/router'
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
 
   const maxPokemons = 250
 

@@ -1,9 +1,10 @@
 .pokemon_container {
     text-align: center;
-    justify-content: space-between;
-    width: min(90%, 1000px);
+    justify-content:center;
+    /* width: min(90%, 1000px); */
     width: 300;
     min-height: 90vh;
+    /* display: contents; */
 
 }
 
