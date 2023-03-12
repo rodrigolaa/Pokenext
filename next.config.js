@@ -17,7 +17,7 @@ const nextConfig = {
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['raw.githubusercontent.com'],
+    domains: ['raw.githubusercontent.com', "cdn.traction.one"],
 },
 experimental: {
   //largePageDataBytes: 128 * 1000, // 128KB by default

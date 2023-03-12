@@ -8,7 +8,7 @@ import {useRouter} from 'next/router'
 
 export async function getStaticPaths() {
 
-    const maxPokemons = 250
+    const maxPokemons = 1
 
     const api = 'https://pokeapi.co/api/v2/pokemon/'
   
