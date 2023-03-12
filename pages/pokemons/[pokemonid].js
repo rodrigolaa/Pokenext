@@ -8,20 +8,20 @@ import {useRouter} from 'next/router'
 
 export async function getStaticPaths() {
 
-    const maxPokemons = 1
+    // const maxPokemons = 1
 
-    const api = 'https://pokeapi.co/api/v2/pokemon/'
+    // const api = 'https://pokeapi.co/api/v2/pokemon/'
   
-    const res = await fetch(`${api}/?limit=${maxPokemons}`)
+    // const res = await fetch(`${api}/?limit=${maxPokemons}`)
   
-    let data = await res.json()
+    // let data = await res.json()
 
-    if (typeof data !== 'undefined') {
+    // if (typeof data !== 'undefined') {
         
-        data
+    //     data
         
-      } else {
-     data = {
+    //   } else {
+     const data = {
             count: 1281,
             next: 'https://pokeapi.co/api/v2/pokemon/?offset=2&limit=2',
             previous: null,
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
               { name: 'ivysaur', url: 'https://pokeapi.co/api/v2/pokemon/2/' }
             ]
           }
-      }
+    //   }
 
     //params
     // console.log("PATHS:", data)
