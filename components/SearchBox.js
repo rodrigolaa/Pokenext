@@ -34,7 +34,7 @@ export default function PokemonSearch({pokemons}) {
   };
   return (
     <>
-              <div>
+        <div>
             <ul>
             <input className = {styles.input} type="text" value={searchTerm} onChange={handleInputChange} placeholder="Search for a pokemon" />
             <button onClick={handleSearch} className = {styles.btn}>Search</button>
@@ -53,37 +53,37 @@ export default function PokemonSearch({pokemons}) {
         );
       }      
       
-function SearchBox() {
-  const [query, setQuery] = useState('');
+// function SearchBox() {
+//   const [query, setQuery] = useState('');
 
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
+//   const handleInputChange = (event) => {
+//     setQuery(event.target.value);
 
 
-  };
+//   };
 
-  function handleSearch(){
-    console.log(`Search query: ${query}`);
-  };
+//   function handleSearch(){
+//     console.log(`Search query: ${query}`);
+//   };
 
-  return (
-    <div  className = {styles.box}>
-    <ul>
-            <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
-            className = {styles.input}
-        />
-        <button onClick={handleSearch} className = {styles.btn}>Search</button>
-    </ul>
-    </div>
+//   return (
+//     <div  className = {styles.box}>
+//     <ul>
+//             <input
+//             type="text"
+//             placeholder="Search..."
+//             value={query}
+//             onChange={handleInputChange}
+//             className = {styles.input}
+//         />
+//         <button onClick={handleSearch} className = {styles.btn}>Search</button>
+//     </ul>
+//     </div>
       
-  );
+//   );
 
 
-}
+// }
 
 
   

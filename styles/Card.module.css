@@ -5,7 +5,9 @@
     flex-direction: column;
     padding: 2em 1em;
     margin-bottom: 2em;
-    width: 18%  ;
+    /* margin-right: 0.01em; */
+
+    width: 20%  ;
     border-radius: 1em;
     border: 2px solid #e33d33;
     box-shadow: 5px 5px 12px rgba(0,  0, 0, 0.5);
@@ -28,17 +30,22 @@
 .card .title {
     text-transform: capitalize;
     margin-bottom: 1em;
-    font-size: 1.4em;
+    font-size: 1.0em;
 }
 
 .card .btn {
     text-decoration: none;
     background-color: #fff;
     color: #222;
-    padding: .7em 1.2em;
+    padding: .5em 0.8em;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    /* width: 50%  ; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
 }
 
 .card .btn:hover {

@@ -1,21 +1,27 @@
 .pokemon_container {
     text-align: center;
+    justify-content: space-between;
+    width: min(90%, 1000px);
+    width: 300;
+    min-height: 90vh;
 
 }
 
 .title {
     font-size: 2.5em;
+    justify-content: center;
     text-transform: capitalize;
     background-color: #333;
     color: #fff;
     padding: 0.3em;
     margin: 0.8em auto;
-    width: 300px;
+    width: min(90%, 300px);
 }
 
 .pokemon_container h3 {
     margin: 0.6em auto;
     font-size: 1.2em;
+    min-height: min(60%, 1000px);
 }
 
 .type_container {

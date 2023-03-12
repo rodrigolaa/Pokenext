@@ -8,8 +8,8 @@ export default function Card({pokemon}) {
         <div className={styles.card}>
             <Image
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
-                height = "120"
-                width = "120"
+                height = "100"
+                width = "100"
                 alt={pokemon.name}
             />
             <p className={styles.id}>#{pokemon.id}</p>

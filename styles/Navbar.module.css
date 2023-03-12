@@ -1,11 +1,13 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1em 1.2em;
     margin-bottom: 2em;
     background-color: #333;
     color: #fff;
+    cursor: pointer;
+
 
 }
 
@@ -13,6 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* flex-direction: row; */
+    /* margin-left: 1.3em; */
 }
 
 .h1 {
@@ -20,12 +24,16 @@
 }
 
 .link_items {
-    display: flex;
+    display:flex;
     list-style: none;
+    padding: 1em 1.2em;
+    flex-direction: column;
+
 }
 
 .link_items li {
     margin-right: 1.3em;
+
 }
 
 .link_items a {

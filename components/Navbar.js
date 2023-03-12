@@ -9,21 +9,16 @@ export default function Navbar({pokemons}){
         <nav className={styles.navbar}>
             <div className={styles.logo}>
                 <Image src='/images/pokeball.png' width="30" height="30" alt="PokeNext"/>
-                <h1>PokeDex</h1>
+                <h1 className={styles.h1}>PokeDex</h1>
+            </div>
+            <div>
+            <ul className= {styles.link_items}>
+                    <PokemonSearch  pokemons = {pokemons}/>
+                    <Link href="/" legacyBehavior><a>Home</a></Link>
+                    <Link href="/about" legacyBehavior><a>About</a></Link>
+            </ul>
             </div>
             
-            <ul className={styles.link_items}>
-                <li>
-                    <PokemonSearch  pokemons = {pokemons}/>
-                </li>
-                
-                <li>
-                    <Link href="/" legacyBehavior><a>Home</a></Link>
-                </li>
-                <li>
-                    <Link href="/about" legacyBehavior><a>About</a></Link>
-                </li>
-            </ul>
         </nav>
     )
 }
