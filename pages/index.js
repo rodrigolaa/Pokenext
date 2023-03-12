@@ -14,17 +14,17 @@ export async function getStaticProps(){
 
   // const api = 'https://pokeapi.co/api/v2/pokemon/'
 
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon//?limit=250`)
+  // const res = await fetch(`https://pokeapi.co/api/v2/pokemon//?limit=250`)
 
-  const data = await res.json()
+  // const data = await res.json()
 
   //add pokemon index
 
 
-  data.results.forEach((item,index)=> {
-    item.id = index + 1
+  // data.results.forEach((item,index)=> {
+  //   item.id = index + 1
 
-  })
+  // })
 
   //console.log(data.results)
 
