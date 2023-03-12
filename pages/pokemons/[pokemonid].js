@@ -3,23 +3,25 @@ import Image from "next/image"
 
 import styles from 'styles/Pokemon.module.css'
 
+import {useRouter} from 'next/router'
+
 
 export async function getStaticPaths() {
 
-    // const maxPokemons = 2
+    const maxPokemons = 250
 
-    // const api = 'https://pokeapi.co/api/v2/pokemon/'
+    const api = 'https://pokeapi.co/api/v2/pokemon/'
   
-    // const res = await fetch(`${api}/?limit=${maxPokemons}`)
+    const res = await fetch(`${api}/?limit=${maxPokemons}`)
   
-    // const data = await res.json()
+    let data = await res.json()
 
-    // if (data) {
+    if (typeof data !== 'undefined') {
         
-    //     data
+        data
         
-    //   } else {
-    const data = {
+      } else {
+     data = {
             count: 1281,
             next: 'https://pokeapi.co/api/v2/pokemon/?offset=2&limit=2',
             previous: null,
@@ -28,7 +30,7 @@ export async function getStaticPaths() {
               { name: 'ivysaur', url: 'https://pokeapi.co/api/v2/pokemon/2/' }
             ]
           }
-    //   }
+      }
 
     //params
     // console.log("PATHS:", data)
@@ -41,7 +43,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false,
+        fallback: true,
     }
 
 }
@@ -61,6 +63,13 @@ export async function getStaticProps(context) {
 }
 
 export default function Pokemon({pokemon}){
+
+    const router = useRouter()
+
+    if(router.isFallback) {
+        return <div>Loading...</div>
+    }
+
     return (
         <div className={styles.pokemon_container}>
             <h1 className={styles.title}>{pokemon.name}</h1>
@@ -87,13 +96,13 @@ export default function Pokemon({pokemon}){
                         <h4>Weight:</h4>
                         <p>{pokemon.weight / 10} kg</p>
                     </div>
-                    {/* <div className={styles.data_weight}>
+                    <div className={styles.data_weight}>
                     <h4>Abilities:</h4>
                     {pokemon.abilities.map((item, index) => (
                         <span key={index} className={`${styles.type}`}>{item.ability.name}</span>
                     )
                     )}
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>

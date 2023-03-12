@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 export default function App({ Component, pageProps }) {
 
   return (
-    <Layout>
+    <Layout pokemons={pageProps.pokemons}>
       <Component {...pageProps} />
     </Layout>
   )
