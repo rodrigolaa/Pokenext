@@ -40,7 +40,7 @@ export default function PokemonSearch({pokemons}) {
             <button onClick={handleSearch} className = {styles.btn}>Search</button>
             </ul>
             <ul>
-              {filteredPokemons.map((pokemon) => (
+              {filteredPokemons && filteredPokemons.map((pokemon) => (
                 <li key={pokemon.id}>
                   <Link href={`pokemons/${pokemon.id}`}>{pokemon.name}</Link>
                 </li>

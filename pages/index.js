@@ -8,7 +8,7 @@ import Card from '../components/Card'
 import {useRouter} from 'next/router'
 
 
-export async function getStaticProps(){
+export async function getStaticProps( ){
 
   const maxPokemons = 251
 
@@ -19,6 +19,7 @@ export async function getStaticProps(){
   const data = await res.json()
 
   //add pokemon index
+
 
   data.results.forEach((item,index)=> {
     item.id = index + 1
@@ -44,7 +45,7 @@ export default function Home({pokemons}) {
         <Image src="/images/pokeball.png" width= "50" height = "50" alt = "PokeNext"/>
       </div>,
       <div className={styles.pokemon_container}>
-        {pokemons.map((pokemon) => (
+        {pokemons && pokemons.map((pokemon) => (
             <Card key={pokemon.id} pokemon={pokemon}/>
       ))}
     </div>
